@@ -15,14 +15,13 @@ for x in range(psswd_len):
 	
 	# Depending on the char_choice, either alphabet, symbol, or number will be the next character in the password
 	
-	match char_choice:
-		case 0:
-			random_char = str(math.floor(random.random() * 10))
-		case 1:
-			random_char = symbols[math.floor(random.random() * len(symbols))]
-		case 2:
-			random_char = alphabet[math.floor(random.random() * len(alphabet))]
-	
+	if char_choice == 0:
+		random_char = str(math.floor(random.random() * 10))
+	elif char_choice == 1:
+		random_char = symbols[math.floor(random.random() * len(symbols))]
+	else:
+		random_char = alphabet[math.floor(random.random() * len(alphabet))] 
+
 	password += random_char;
 
 print(password);
